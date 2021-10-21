@@ -1,0 +1,120 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TINKERERS' LAB</title>
+
+  <meta name="theme-color" content="#000000" />
+  <meta
+    name="description"
+    content="IIT Bombay TINKERERS  TINKERERS' LAB "
+  />
+
+ <!-- library imports -->
+ <link
+ rel="stylesheet"
+ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+ crossorigin="anonymous"
+ />
+
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+</head>
+
+<nav class="navbar  navbar-expand-md fixed-top shadow pt-2">
+  <span
+    class="navbar-toggler"
+    data-toggle="collapse"
+    data-target="#collapsibleNavbar"
+  >
+    <div class="nav-icon" title="Menu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </span>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav"*ngIf="Check_Technician()" routerLink="technician" routerLinkActive="active-link">
+          TECHNICIAN
+        </a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav" href="../" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+          true}">
+          HOME
+        </a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav"routerLink="about" routerLinkActive="active-link">
+          ABOUT
+        </a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav"  [href]="events_href" routerLinkActive="active-link">
+          EVENTS
+        </a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav"  routerLink="machinestatus" routerLinkActive="active-link">
+          MACHINE STATUS
+        </a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav"  routerLink="machinetut" routerLinkActive="active-link">
+          MACHINE TUTORIALS
+        </a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav"  *ngIf="logged_in" routerLink="inventory" routerLinkActive="active-link">
+          INVENTORY
+        </a>
+      </li>
+     
+      
+     
+      <li class="nav-item mx-3">
+        <a class="nav-link button-nav" routerLink="contact" routerLinkActive="active-link">
+          CONTACT
+        </a>
+      </li>
+      <div class="dropdown" *ngIf="logged_in">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{user_data.first_name}} {{user_data.last_name}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item"  *ngIf="logged_in" routerLink="../cart">My Cart</a>
+          <a class="dropdown-item" *ngIf="logged_in" routerLink="../approved">Issued Items</a>
+          <a class="dropdown-item" routerLink=""  (click)="logout()" >Logout</a>
+        </div>
+      </div>
+      
+        
+    
+    </ul>
+  </div>
+
+  
+  
+</nav>
+
+<router-outlet></router-outlet>
+
+<br><br><br>
+ 
+
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  
+ 
+  <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+</footer>

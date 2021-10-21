@@ -1,0 +1,119 @@
+.cards{
+    padding: 20px;
+}
+.card{
+    margin: 10px;
+}
+.video{
+    margin-top: 20px;
+}
+.card-header{
+    font-size: x-large;
+    font:bold;
+}@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background:url("/assets/Images/TL2.png") no-repeat       center fixed;
+    background-size: cover;
+}
+
+.card {
+    width: 600px;
+    text-align: center;
+    position: relative; 
+    
+}
+
+.card__content {
+    text-align: center;
+    position: relative;
+    padding: 15em 5em;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+    transform: rotateY(.5turn);
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center; 
+}
+
+.card__front {
+    background-color: black;
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+    transform: translateY(.25turn);
+}
+
+.card__title {
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    color: orange;
+    transform: translateZ(6rem);
+    transform-style: preserve-3d;
+}
+
+.card__front::before {
+    content:'';
+    position: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid white;
+    transform: var(--level-one);
+    grid-row: 0/4;
+    transform: translateZ(6rem);
+}
+
+.card__subtitle {
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    color: orange;
+    transform: translateZ(4rem);
+}
+
+.card__body {
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: orange;
+    transform: translateZ(3rem);
+}
+
+.card__back {
+    transform: rotateY(.5turn);
+    background: black;
+}
+
+.card__back::before {
+    content:'';
+    position: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid white;
+    transform: var(--level-one);
+    grid-row: 0/4;
+    transform: translateZ(6rem);
+}

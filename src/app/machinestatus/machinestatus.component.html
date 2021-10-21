@@ -1,0 +1,26 @@
+<br><br><br><br>
+<body>
+  <br><br><br><br>
+<div class="container table-responsive" >
+
+  <table class="table table-striped mt-5" id="tabletext">
+    <thead class="table-primary" style="background-color: black;">
+      <th style="background-color: black; color:cornsilk ">Machine Type</th>
+      <th  style="background-color: black; color:cornsilk ">Machine Name </th>
+      <th  style="background-color: black; color:cornsilk ">Working Status</th>
+      <th  style="background-color: black; color:cornsilk ">Report</th>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let machine of machines" >
+        <tr [class]="machine.status ? 'table-success':'table-danger'" style="background-color: black;">
+          <td>{{items[machine.type-1].name}}</td>
+          <td>{{machine.name}}</td>
+          <td>{{returnStatus(machine.status)}}</td>
+          <td><button (click)="reportMachine(machine)" class="btn btn-danger">Report</button></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+<br><br><br><br>
+</body>

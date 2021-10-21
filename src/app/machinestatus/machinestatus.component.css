@@ -1,0 +1,31 @@
+#tabletext{
+    text-align: center;
+    background-color: black;
+}
+#report{
+    margin-left: 82%;
+    margin-top: 0.5vh;
+    margin-bottom: 0px;
+}
+#table{
+    margin-top: 0px;
+    background-color: black;
+}
+body {
+    margin-top: -100px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    background: rgb(3, 16, 59);
+    background-image: linear-gradient(
+      135deg,
+      rgba(64, 219, 216, 0.15) 0%,
+      rgba(3, 16, 59, 0.15) 35%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
